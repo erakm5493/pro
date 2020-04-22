@@ -45,7 +45,7 @@ services:
       - db  
   db:
     image: "microsoft/mssql-server-linux"    
-    container_name: "MvcApp"
+    container_name: "mydb"
     expose:
     environment:
     SA_PASSWORD: "@Aa123456"
