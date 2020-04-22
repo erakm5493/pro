@@ -43,9 +43,9 @@ services:
       environment:
         ConnectionStrings__ProductsContext: "Server=db;Database=ProductsContext;User=sa;Password=@Aa123456;"
       depends_on:
-        - db
+        - database
 
-    db:
+    database:
       container_name: db
       image: "microsoft/mssql-server-linux"
       expose:
