@@ -36,20 +36,21 @@ services:
   
   services:
     mvcapp:
-      container_name: mvcapp
+      container_name: "mvcapp"
+	  hostname: "mvcapp"
       image: erakm5493/devops:latest
       ports:
         - "80:80"
       environment:
         ConnectionStrings__ProductsContext: "Server=db;Database=ProductsContext;User=sa;Password=@Aa123456;"
       depends_on:
-        - database
+        - db
 
-    database:
-      container_name: database
+    db:
+      container_name: "db"
+	  hostname: "db"
       image: "microsoft/mssql-server-linux"
-      expose:
-        - "1433"
       environment:
         SA_PASSWORD: "@Aa123456"
         ACCEPT_EULA: "Y"
+      
