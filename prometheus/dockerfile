@@ -1,0 +1,7 @@
+FROM prom/prometheus
+
+LABEL maintainer="erakm5493@gmail.com"
+
+# Add in the configuration file from the local directory.
+ADD prometheus.yml /etc/prometheus/prometheus.yml
+ADD alert.rules /etc/prometheus/alert.rules
