@@ -37,7 +37,7 @@ services:
   services:
     mvcapp:
       container_name: "mvcapp"
-	  hostname: "mvcapp"
+      hostname: "mvcapp"
       image: erakm5493/devops:latest
       ports:
         - "80:80"
@@ -48,7 +48,7 @@ services:
 
     db:
       container_name: "db"
-	  hostname: "db"
+      hostname: "db"
       image: "microsoft/mssql-server-linux"
       environment:
         SA_PASSWORD: "@Aa123456"
