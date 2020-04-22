@@ -47,10 +47,8 @@ services:
         - db
 
     db:
-      container_name: "db"
-      hostname: "db"
-      image: "microsoft/mssql-server-linux"
-      environment:
-        SA_PASSWORD: "@Aa123456"
-        ACCEPT_EULA: "Y"
+        image: "mcr.microsoft.com/mssql/server"
+        environment:
+            SA_PASSWORD: "@Aa123456"
+            ACCEPT_EULA: "Y"
       
