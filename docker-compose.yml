@@ -46,10 +46,10 @@ services:
         - database
 
     database:
-      container_name: db
+      container_name: database
       image: "microsoft/mssql-server-linux"
+      expose:
+        - "1433"
       environment:
         SA_PASSWORD: "@Aa123456"
         ACCEPT_EULA: "Y"
-      ports:
-        - "1433:1433"
