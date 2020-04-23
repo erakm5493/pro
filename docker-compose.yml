@@ -34,8 +34,7 @@ services:
     links:    
       - prometheus
   
-  services:
-    mvcapp:
+  mvcapp:
       container_name: "mvcapp"
       hostname: "mvcapp"
       image: erakm5493/devops:latest
@@ -44,11 +43,11 @@ services:
       environment:
         ConnectionStrings__ProductsContext: "Server=db;Database=ProductsContext;User=sa;Password=@Aa123456;"
       depends_on:
-        - db
+              - db
 
-    db:
-        image: "mcr.microsoft.com/mssql/server"
-        environment:
-            SA_PASSWORD: "@Aa123456"
-            ACCEPT_EULA: "Y"
+  db:
+      image: "mcr.microsoft.com/mssql/server"
+      environment:
+         SA_PASSWORD: "@Aa123456"
+         ACCEPT_EULA: "Y"
       
